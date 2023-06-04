@@ -37,9 +37,18 @@ function App() {
     setNewNumber(event.target.value);
   }
 
+  const handleFilterByName = (event) => {
+
+  }
+
   return (
     <div>
       <h2>Phonebook</h2>
+
+      <div>
+        Filter By Name: <input onChange={handleFilterByName}/>
+      </div>
+
       <form onSubmit={addPerson}>
         <div>
           name: <input 
@@ -74,3 +83,13 @@ function App() {
 }
 
 export default App;
+
+// Next tasks
+
+/*
+  1. Implement a filter search box, which filters the phone book by person name
+  2. Move the data to db.json so that you will have a json backend server
+  3. Add the numbers to the backend
+  4. Update component that lets the users to update the phone book record
+  5. Delete entries from the phonebook
+*/
